@@ -10,7 +10,7 @@ def Salir():
 def about():
     r=mb.askyesno("Acerca de", "Para más información\nserá redirigido al repositorio publico de GitHub\ndonde está toda la información del programa")
     if r == YES:
-        webbrowser.open('https://github.com/AlexDavidTD/ProTerTule')
+        webbrowser.open('https://github.com/AlexDavidTD/Proyecto_ProTerTule')
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
