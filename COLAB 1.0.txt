@@ -1,0 +1,96 @@
+#PROYECTO ProTeTule#
+# ALGOITMO QUE PERMITA CALCULAR PROPIEDADES TERMODINÁMICAS 
+# Necesitamos calcular variables como Calor especifico, Confuctividad térmica, Difusicidad térmica, Densidad
+# A partir de variables conocidas como Volumen, Presion, Temperatura
+
+#pedimos variables (fracción masica de las propiedades)
+
+chos=float(input("Ingresa el valor porcentual de los Minerales en el alimento: "))
+if chos<0 or chos>1:
+  print("No se permiten valores negativos o mayores a 1")
+else:
+  proteina=float(input("Ingrese el valor porcentual de las Proteinas en el alimento: "))
+  if proteina<0 or proteina>1:
+    print("No se permiten valores negativos o mayores a 1")
+  else:
+    fibra=float(input("Ingresa el valor porcentual de la Fibra en el alimento: "))
+    if fibra<0 or fibra>1:
+      print("No se permiten valores negativos o mayores a 1")
+    else:
+      carboh=float(input("Ingresa el valor porcentual de los Carbohidratos en el alimento: "))
+      if carboh<0 or carboh>1:
+        print("No se permiten valores negativos o mayores a 1")
+      else:
+        h2o=float(input("Ingresa el valor porcentual del Agua en el alimento: "))
+        if h2o<0 or h2o>1:
+          print("No se permiten valores negativos o mayores a 1")
+        else:
+          lipido=float(input("Ingrese el valor porcentual de las Grasas en el alimento: "))
+          if lipido<0 or lipido>1:
+            print("No se permiten valores negativos o mayores a 1")
+          else:
+            #sumar y valdiar que las fracciónes masicas sean correctas
+            sumalim=chos+proteina+fibra+carboh+h2o+lipido
+            print(sumalim)
+            if sumalim==1:
+              #ingresar temperatura y valdiar que esté en el rango de -40 a 150 °C
+              temp=float(input("Ingresar la temperatura en °C: "))
+              if (temp >=-40) and (temp<=150):
+                #Calor especifico expresado en kJ/Kg*K en base a los componentes y la temperatura ingresada
+                cpprot= 2.0082+1.2089*(10**-3)*(temp)-1.3129*(10**-6)*(temp**2)
+                cplip= 1.9842+1.4733*(10**-3)*(temp)-4.8008*(10**-6)*(temp**2)
+                cpcarboh=1.5488+1.9625*(10**-3)*(temp)-5.9399*(10**-6)*(temp**2)
+                cpfi= 1.8459+1.8306*(10**-3)*(temp)-4.6509*(10**-6)*(temp**2)
+                cpchos= 1.02926+1.8896*(10**-3)*(temp)-3.6817*(10**-6)*(temp**2)
+                if temp<0 and temp>-40:
+                  cph2o= 4.0817-5.3062*(10**-3)*(temp)+9.9516*(10**-4)*(temp**2)
+                elif temp>=0 and temp<150:
+                  cph2o= 4.1762-9.0864*(10**-5)*(temp)+5.4731*(10**-6)*(temp**2)
+                cpalim=(cplip*lipido)+(cpprot*proteina)+(cpfi*fibra)+(cpcarboh*carboh)+(cpchos*chos)+(cph2o*h2o)
+                print("El Calor Especifico (Cp) deL alimento es aproximadamente: ", round((cpalim),3), "kJ/(kg°K)")
+
+                #densidad P (Kg/m^3)
+                denpro= 1.3299*(10**3)-5.1840*(10**-1)*temp
+                denlip= 9.2559*(10**2)-4.1757*(10**-1)*temp
+                dencarb= 1.5991*(10**3)-3.1046*(10**-1)*temp
+                denfib=1.3115*(10**3)-3.6589*(10**-1)*temp
+                denchos=2.4238*(10**3)-2.8063*(10**-1)*temp
+                denh2o= 9.9718*(10**2)+3.1439*(10**-3)*temp-3.7574*(10**-3)*(temp**2)
+                densid=1/((proteina/denpro)+(lipido/denlip)+(carboh/dencarb)+(fibra/denfib)+(chos/denchos)+(h2o/denh2o))
+                print("La Densidad (ρ) del alimento es aproximadamente: ", round((densid), 3), "Kg/(m^3)")
+
+                #fracciónes volumetricas = fracción másica / densidad 
+                proteina2=(proteina/denpro)/(1/densid)
+                lipido2=(lipido/denlip)/(1/densid)
+                carboh2=(carboh/dencarb)/(1/densid)
+                fibra2=(fibra/denfib)/(1/densid)
+                chos2=(chos/denchos)/(1/densid)
+                h2o2=(h2o/denh2o)/(1/densid)
+
+                #Conductividad termica (K) W/m*°K, modelos en funcion de temperatura y los componentes ingresados
+                kprot= 1.7881*(10**-1)+1.1958*(10**-3)*temp-2.7178*(10**-6)*temp**2
+                klip= 1.8071*(10**-1)-2.7604*(10**-3)*temp-1.7749*(10**-7)*temp**2
+                kcarboh=2.0141*(10**-1)+1.3874*(10**-3)*temp-4.3312*(10**-6)*temp**2
+                kfibra=1.8331*(10**-1)+1.2497*(10**-3)*temp-3.1683*(10**-6)*temp**2
+                kchos=3.2962*(10**-1)+1.4011*(10**-3)*temp-2.9069*(10**-6)*temp**2
+                kh2o= 5.7109*(10**-1)+1.7625*(10**-3)*temp-6.7036*(10**-6)*temp**2
+                kalim= (kprot*proteina2)+(klip*lipido2)+(kcarboh*carboh2)+(kfibra*fibra2)+(kchos*chos2)+(kh2o*h2o2)
+                print("La Conductividad Térmica (K) en el alimento es aproximadamente: ", round((kalim), 3), "W/(m°K)")
+
+                #difusiviadad termica (alfha) m^2/s en funcion de los valores de los compoentes ingresados y temperatura
+                alfprot= 6.8714*(10**-2)+4.7578*(10**-4)*(temp)-1.4646*(10**-6)*(temp**2)
+                alflip=9.8777*(10**-2)-1.2569*(10**-4)*(temp)-3.8286*(10**-8)*(temp**2)
+                alfcarb=8.0842*(10**-2)+5.3052*(10**-4)*(temp)-2.3218*(10**-6)*(temp**2)
+                alfibra=7.3976*(10**-2)+5.1902*(10**-4)*(temp)-2.2202*(10**-6)*(temp**2)
+                alfchos=1.2461*(10**-1)+3.7321*(10**-4)*(temp)-1.2244*(10**-6)*(temp**2)
+                alfh2o= 1.3168*(10**-1)+6.2477*(10**-4)*(temp)-2.4022*(10**-6)*(temp**2)
+                alfha=((alfprot*proteina2)+(alflip*lipido2)+(alfcarb*carboh2)+(alfibra*fibra2)+(alfchos*chos2)+(alfh2o*h2o2))
+                print("La Difusividad Térmica (α) del alimento es aproximadamente: ", alfha, "m^2/s")
+              else:
+                print("tempratura fuera del rango valido: -40°C < Temperatura < 150°C")
+                print("A una tempratura de ", temp,"°C...")
+            else:
+              print("¡ERROR! - Recuerda que la sumatoria de las fracciónes másicas debe ser 1")
+
+
+#################################################################

@@ -1,0 +1,11 @@
+1.Titulo: "ProTerTule"
+2.declaración y solicitud de variables
+3.verificación y valdiación de datos ingresados
+4.calculos de propiedades con "ecuaciones de choi y okos"
+6.impresión de resultados
+7.selección de GUI (entorno de desarrollo grafico), para crear app de escritorio
+8.desarrollar interfáz gráfica
+9.mudar codigo de entorno
+10.valdiar funcionaldiad del frame y sus widgets
+11.realziar "pruebas de fuego"
+12.exportar a archivo ejecutable portable (.exe)
