@@ -30,7 +30,8 @@ Al aplicar los métodos y modelaciones matemáticas propuestos, esta herramienta
 ### Imagen 4. Versión 5.0 de la aplicación Protertule "Dark" (Interfáz Actualizada)
 ![Captura de pantalla 2023-06-26 221542](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/5f7319b3-9c7b-47cc-bcb4-3c597630a714)
 ### Imagen 5. Versión 5.0 de la aplicación Protertule "Light" (Interfáz Actualizada)
-![Captura de pantalla 2023-06-26 221303](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/2c1fa047-bc02-48bb-aac8-6cf7ec406b7a)
+![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/9ddcbd05-47d1-4d26-8b0a-d71600593afd)
+
 
 
 ## Conclusiones
