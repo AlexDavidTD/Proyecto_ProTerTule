@@ -17,10 +17,12 @@ def resource_path(relative_path):
     except Exception:
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path) 
-ctk.set_appearance_mode("dark");ctk.set_default_color_theme("dark-blue")
+ctk.set_appearance_mode("light");ctk.set_default_color_theme("dark-blue")
 raiz=ctk.CTk();raiz.title("ProTerTule V5.0");raiz.geometry("1180x620+100+30");raiz.configure(padx=40, pady=20);raiz.resizable(False,False)
 path=resource_path("icono.ico");raiz.iconbitmap(path); Canvas = ctk.CTkCanvas(width=380, height=170);path2 = resource_path("logo-udea-ingenieria.png")
-logo_img2 = PhotoImage(file=path2);Canvas.create_image(190, 85, image=logo_img2);Canvas.grid(column=1, row=0), Canvas.configure(bg="gray10")
+logo_img2 = PhotoImage(file=path2);Canvas.create_image(190, 85, image=logo_img2);Canvas.grid(column=1, row=0), Canvas.configure(bg="white smoke")
+Canvas2 = ctk.CTkCanvas(width=150, height=150); path2 = resource_path("D:/PROYECTO/temperatura.png"); logo_img = PhotoImage(file=path2)
+Canvas2.create_image(75, 75, image=logo_img); Canvas2.grid(column=3, row=0); Canvas2.config(bg='white smoke')
 input1_Min = ctk.CTkEntry(master=raiz, font=("Lucida Fax", 14));input1_Min.insert(END, string="0");input1_Min.grid(pady=1, column=1, row=2);input1_Min.configure(state="disabled")
 label1_Min = ctk.CTkLabel(master=raiz,text="Minerales %", font=("Lucida Fax", 14));label1_Min.grid(column=0, row=2)
 input2_Pro = ctk.CTkEntry(master=raiz, font=("Lucida Fax", 14));input2_Pro.insert(END, string="0");input2_Pro.grid(pady=1, column=1, row=3);input2_Pro.configure(state="disabled")
@@ -137,11 +139,13 @@ def cambiar_tema(choice):
         respuesta=mb.askyesno("Modo Oscuro","Se cambiará la interfáz a modo Oscuro\n¿Quiere continuar?")
         if respuesta==YES:
             Canvas.configure(bg="gray10")
+            Canvas2.configure(bg="gray10")
             ctk.set_appearance_mode("dark")
     if tema=='Light':
         respuesta2=mb.askyesno("Modo Claro","Se cambiará la interfáz a modo Claro\n¿Quiere continuar?")
         if respuesta2==YES:
             Canvas.configure(bg="white smoke")
+            Canvas2.configure(bg="white smoke")
             ctk.set_appearance_mode("light")
 Cmb_tema=ctk.StringVar(value="Elige Tema")
 tema=ctk.CTkComboBox(master=raiz,font=("Lucida Calligraphy", 14),state="readonly",values=["Dark", "Light"], command=cambiar_tema\
