@@ -1,4 +1,4 @@
-import webbrowser; from tkinter import *; import tkinter as tk; from tkinter import ttk; import customtkinter as ctk; from tkinter import messagebox as mb; import sys; import os; from Boton_Nuevo import *; from Boton_Calcular import *
+import webbrowser; import customtkinter as ctk; from tkinter import messagebox as mb; import sys; import os; from Boton_Nuevo import *; from Boton_Calcular import *
 def Calcular():
     Calculo(inputs, labels, mezcla)
 def Nuevo():
@@ -122,7 +122,6 @@ def Elegir(choise):
     elif Slc == 'Liquido Saturado (Sub-enfriado)':
         cambio2();entrada_liq_Sat();mensaje_azucar()
 label_Space4 = ctk.CTkLabel(master=raiz,text="Tipo de Mezcla", font=("Lucida Fax", 14));label_Space4.grid(column=0, row=12)
-#style= ttk.Style();style.theme_use('clam')
 mezcla=ctk.StringVar(value="Seleccione una opción")
 Combo_Mezcla = ctk.CTkComboBox(master=raiz,font=("Constantia", 14),state="readonly",values=["Seleccione una opción","Sacarosa", "Azúcares reductores",\
     "Jugo de frutas", "Extracto de café", "Jugo de manzana", "Soluciones de azucar", "Liquido Saturado (Sub-enfriado)"], command=Elegir, variable=mezcla);Combo_Mezcla.grid(column=0, row=13)
@@ -148,5 +147,4 @@ Cmb_tema=ctk.StringVar(value="Elige Tema")
 tema=ctk.CTkComboBox(master=raiz,font=("Lucida Calligraphy", 14),state="readonly",values=["Dark", "Light"], command=cambiar_tema\
     ,variable=Cmb_tema);tema.grid(column=2, row=14)
 label_Tema = ctk.CTkLabel(master=raiz,text="Tema",font=("Lucida Calligraphy", 14));label_Tema.grid(column=2, row=13)
-
 raiz.mainloop()

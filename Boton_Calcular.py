@@ -1,4 +1,4 @@
-from tkinter import *; import math as ma;from math import log10; from tkinter import messagebox as mb
+from tkinter import *; import math as ma; from tkinter import messagebox as mb
 def Calculo(inputs, labels, mezcla):
     Azucar=mezcla.get();input1_Min=inputs[0];input2_Pro=inputs[1];input3_Fib=inputs[2];input4_Car=inputs[3];input5_Agu=inputs[4];\
         input6_Gra=inputs[5];input7_Tem=inputs[6];input8_Pres=inputs[7];input9_Calid=inputs[8];label_Space=labels[0];\
