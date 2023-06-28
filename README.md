@@ -31,6 +31,8 @@ Al aplicar los métodos y modelaciones matemáticas propuestos, esta herramienta
 ![Captura de pantalla 2023-06-26 221542](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/5f7319b3-9c7b-47cc-bcb4-3c597630a714)
 ### Imagen 5. Versión 5.0 de la aplicación Protertule "Light" (Interfáz Actualizada)
 ![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/9ddcbd05-47d1-4d26-8b0a-d71600593afd)
+### Imagen 6. Versión 6.0 de la aplicación Protertule -NUEVAS FUNCIONES- Registrar y Guardar calculos en base de datos .XLSX
+![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/d3cfdae2-7bc8-4ac8-919b-16380b0bb89c)
 
 
 
