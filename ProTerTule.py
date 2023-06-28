@@ -1,6 +1,8 @@
-import webbrowser; import customtkinter as ctk; from tkinter import messagebox as mb; import sys; import os; from Boton_Nuevo import *; from Boton_Calcular import *
+import webbrowser; import customtkinter as ctk; from tkinter import messagebox as mb; import sys; import os;\
+    from Boton_Nuevo import *; from Boton_Calcular import *; from Boton_Registrar import *
 def Calcular():
     Calculo(inputs, labels, mezcla)
+    boton5.configure(state="normal")
 def Nuevo():
     restart(inputs, labels, Combo_Mezcla)
 def Salir():
@@ -11,6 +13,11 @@ def about():
     r=mb.askyesno("Acerca de", "Para más información\nserá redirigido al repositorio publico de GitHub\ndonde está toda la información del programa")
     if r == YES:
         webbrowser.open('https://github.com/AlexDavidTD/Proyecto_ProTerTule')
+Entalpia=[]; EnergiaInt=[]; CalorEsp=[]; Densidad=[]; ConductTerm=[]; DifusTerm =[]
+def Registro():
+    Registrar(labels, Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, boton5)
+def Guardado():
+    Guardar(Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, boton6)
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
@@ -18,7 +25,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path) 
 ctk.set_appearance_mode("light");ctk.set_default_color_theme("dark-blue")
-raiz=ctk.CTk();raiz.title("ProTerTule V5.0");raiz.geometry("1180x620+100+30");raiz.configure(padx=40, pady=20);raiz.resizable(False,False)
+raiz=ctk.CTk();raiz.title("ProTerTule V6.0");raiz.geometry("1180x620+100+30");raiz.configure(padx=40, pady=20);raiz.resizable(False,False)
 path=resource_path("icono.ico");raiz.iconbitmap(path); Canvas = ctk.CTkCanvas(width=380, height=170);path2 = resource_path("logo-udea-ingenieria.png")
 logo_img2 = PhotoImage(file=path2);Canvas.create_image(190, 85, image=logo_img2);Canvas.grid(column=1, row=0), Canvas.configure(bg="white smoke")
 Canvas2 = ctk.CTkCanvas(width=150, height=150); path2 = resource_path("D:/PROYECTO/temperatura.png"); logo_img = PhotoImage(file=path2)
@@ -133,6 +140,8 @@ boton = ctk.CTkButton(master=raiz,text=("Calcular"), font=("Britannic Bold", 16)
 boton2 = ctk.CTkButton(master=raiz,text=("Nuevo"), font=("Britannic Bold", 16), command=Nuevo);boton2.grid(column=1, row=13)
 boton3 = ctk.CTkButton(master=raiz,text=("Salir"),font=("Lucida Calligraphy", 14), command=Salir);boton3.grid(column=3, row=14)
 boton4 = ctk.CTkButton(master=raiz, text=("About"),font=("Lucida Calligraphy", 14), command=about);boton4.grid(padx=10, column=4, row=14)
+boton5 = ctk.CTkButton(master=raiz,text=("Registrar"), font=("Britannic Bold", 16), command=Registro);boton5.grid(column=2, row=9)
+boton6 = ctk.CTkButton(master=raiz,text=("Guardar"), font=("Britannic Bold", 16), command=Guardado);boton6.grid(column=2, row=10)
 def cambiar_tema(choice):
     tema=Cmb_tema.get()
     if tema=='Dark':
