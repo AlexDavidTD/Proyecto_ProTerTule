@@ -13,11 +13,11 @@ def about():
     r=mb.askyesno("Acerca de", "Para más información\nserá redirigido al repositorio publico de GitHub\ndonde está toda la información del programa")
     if r == YES:
         webbrowser.open('https://github.com/AlexDavidTD/Proyecto_ProTerTule')
-Entalpia=[]; EnergiaInt=[]; CalorEsp=[]; Densidad=[]; ConductTerm=[]; DifusTerm =[]
+Entalpia=[]; EnergiaInt=[]; CalorEsp=[]; Densidad=[]; ConductTerm=[]; DifusTerm =[];Temperatura=[]; Presión=[]; Calidad=[]
 def Registro():
-    Registrar(labels, Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, boton5)
+    Registrar(inputs, labels, Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, Temperatura, Presión, Calidad, boton5)
 def Guardado():
-    Guardar(Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, boton6)
+    Guardar(Entalpia, EnergiaInt, CalorEsp, Densidad, ConductTerm, DifusTerm, Temperatura, Presión, Calidad)
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
@@ -28,7 +28,7 @@ ctk.set_appearance_mode("light");ctk.set_default_color_theme("dark-blue")
 raiz=ctk.CTk();raiz.title("ProTerTule V6.0");raiz.geometry("1180x620+100+30");raiz.configure(padx=40, pady=20);raiz.resizable(False,False)
 path=resource_path("icono.ico");raiz.iconbitmap(path); Canvas = ctk.CTkCanvas(width=380, height=170);path2 = resource_path("logo-udea-ingenieria.png")
 logo_img2 = PhotoImage(file=path2);Canvas.create_image(190, 85, image=logo_img2);Canvas.grid(column=1, row=0), Canvas.configure(bg="white smoke")
-Canvas2 = ctk.CTkCanvas(width=150, height=150); path2 = resource_path("D:/PROYECTO/temperatura.png"); logo_img = PhotoImage(file=path2)
+Canvas2 = ctk.CTkCanvas(width=150, height=150); path2 = resource_path("temperatura.png"); logo_img = PhotoImage(file=path2)
 Canvas2.create_image(75, 75, image=logo_img); Canvas2.grid(column=3, row=0); Canvas2.config(bg='white smoke')
 input1_Min = ctk.CTkEntry(master=raiz, font=("Lucida Fax", 14));input1_Min.insert(END, string="0");input1_Min.grid(pady=1, column=1, row=2);input1_Min.configure(state="disabled")
 label1_Min = ctk.CTkLabel(master=raiz,text="Minerales %", font=("Lucida Fax", 14));label1_Min.grid(column=0, row=2)
