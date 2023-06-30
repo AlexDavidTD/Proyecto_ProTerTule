@@ -33,12 +33,17 @@ Al aplicar los métodos y modelaciones matemáticas propuestos, esta herramienta
 ![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/9ddcbd05-47d1-4d26-8b0a-d71600593afd)
 ### Imagen 6. Versión 6.0 de la aplicación Protertule -NUEVAS FUNCIONES- Registrar y Guardar calculos en base de datos .XLSX
 ![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/d3cfdae2-7bc8-4ac8-919b-16380b0bb89c)
-
-
-
+### Imagen7. NUEVAS FUNCIONES Registrar y Guardar calculos en base de datos .XLSX (Ejemplo)
+![Ejemplo Base datos](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/b2dac8ba-013c-4b10-8058-3709a43b59eb)
+#
+## Anexos
+[Trabajo final.pdf](https://github.com/AlexDavidTD/Proyecto_ProTerTule/files/11912878/Trabajo.final.pdf) 
+#
+https://www.youtube.com/watch?v=qLwACxjtmNA
+#
 ## Conclusiones
 Los resultados obtenidos hasta el momento han sido positivos, ya que estos, dentro de la industria alimentaria son útiles y se pueden implementar de forma sencilla en los procesos que se lleva a cabo en las empresas, obtuvimos resultados experimentales y estadísticos con un error inferior al 0.4% lo cual es aceptable dentro de los rangos permitidos en la industria alimentaria, nuestra aplicación se ejecuta en equipos con Windows 10 o posterior sin necesidad de instalar softwares adicionales. Será muy útil en la industria alimentaria para optimizar el tiempo de operación y analizar procesos como pasteurización, secado y destilación de manera eficiente, todo lo anterior se traduce en reducción de costos de operación.
-
+#
 ## Agradecimientos
 
 A profesores, familiares y amigos,
