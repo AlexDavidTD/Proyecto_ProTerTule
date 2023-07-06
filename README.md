@@ -38,8 +38,8 @@ Al aplicar los métodos y modelaciones matemáticas propuestos, esta herramienta
 #
 ## Anexos
 [Trabajo final.pdf](https://github.com/AlexDavidTD/Proyecto_ProTerTule/files/11912878/Trabajo.final.pdf) 
-#
-https://www.youtube.com/watch?v=qLwACxjtmNA
+## Clik para ver el vídeo tutorial
+[![Alt text](https://img.youtube.com/vi/qLwACxjtmNA/0.jpg)](https://www.youtube.com/watch?v=qLwACxjtmNA)
 #
 ## Conclusiones
 Los resultados obtenidos hasta el momento han sido positivos, ya que estos, dentro de la industria alimentaria son útiles y se pueden implementar de forma sencilla en los procesos que se lleva a cabo en las empresas, obtuvimos resultados experimentales y estadísticos con un error inferior al 0.4% lo cual es aceptable dentro de los rangos permitidos en la industria alimentaria, nuestra aplicación se ejecuta en equipos con Windows 10 o posterior sin necesidad de instalar softwares adicionales. Será muy útil en la industria alimentaria para optimizar el tiempo de operación y analizar procesos como pasteurización, secado y destilación de manera eficiente, todo lo anterior se traduce en reducción de costos de operación.
