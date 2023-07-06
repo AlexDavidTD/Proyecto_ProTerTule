@@ -21,6 +21,8 @@ Se implementó el uso de diagramas de flujo, lenguajes de programación, diseño
 ## Resultados
 Al aplicar los métodos y modelaciones matemáticas propuestos, esta herramienta permitie determinar las propiedades termodinámicas en alimentos que estén en fase líquido subenfriado hasta líquido saturados y mezclas los cálculos realizados por la aplicación arrojan un porcentaje de error inferior al 0.4% en relación a valores teóricos existentes para la región líquido subenfriado hasta líquido saturado, en la región mezcla se logró realizar el cálculo para variables específicas con resultados interesantes de estudiar de forma analítica y práctica en laboratorio, la versión (estable) 4.0 de la aplicación que esta disponible, tendrá participación nacional e internacional en eventos de ingeniería y divulgación científica.
 
+### Archivo de verificación de los resultados
+[Valdiación.xlsx](https://github.com/AlexDavidTD/Proyecto_ProTerTule/files/11970139/Valdiacion.xlsx)
 ### Imagen 1. Gráfico cálculo porcentaje error aplicación versus datos experimentales
 ![image](https://github.com/AlexDavidTD/Proyecto_ProTerTule/assets/136923801/f2b54c81-59a2-4e7e-881b-4def80a6b2ed)
 ### Imagen 2. Versión 2.0 de la aplicación Protertule
